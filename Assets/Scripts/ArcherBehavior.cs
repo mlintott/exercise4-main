@@ -42,14 +42,11 @@ public class ArcherBehavior : MonoBehaviour
     // Hint: which of the state variables at the top of this file might you need for this function?
     private bool isInRange() {
         // TODO: Implement this method
-        if (calculateDistanceToPlayer() < range)
+        if (calculateDistanceToPlayer() <= range)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     // PART 2: We need to check if the archer's shooting cooldown is over
@@ -63,10 +60,7 @@ public class ArcherBehavior : MonoBehaviour
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     // PART 3: Finally, we need to put it all together and tell the archer how to behave on every frame
